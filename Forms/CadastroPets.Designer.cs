@@ -174,6 +174,7 @@
             btCancelarPet.Text = "CANCELAR";
             btCancelarPet.TextAlign = ContentAlignment.MiddleRight;
             btCancelarPet.UseVisualStyleBackColor = false;
+            btCancelarPet.Click += btCancelarPet_Click;
             // 
             // iconLista
             // 
@@ -198,6 +199,7 @@
             btSalvarPet.Text = "SALVAR";
             btSalvarPet.TextAlign = ContentAlignment.MiddleRight;
             btSalvarPet.UseVisualStyleBackColor = false;
+            btSalvarPet.Click += btSalvarPet_Click;
             // 
             // pictureBox4
             // 
