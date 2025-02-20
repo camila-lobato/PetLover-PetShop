@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="icons\" />
-    <Folder Include="data\" />
   </ItemGroup>
 
   <ItemGroup>

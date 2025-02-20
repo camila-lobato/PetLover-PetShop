@@ -1,11 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
-namespace testeForm.models
+namespace testeForm.data
 {
     internal static class Conexao
     {
@@ -24,7 +24,7 @@ namespace testeForm.models
             {
                 throw new Exception("Erro ao realizar conexão com a base de dados!" + ex.Message);
             }
-            
+
         }
         public static void FecharConexao()
         {

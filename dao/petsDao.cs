@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using testeForm.models;
+using testeForm.data;
 using MySql.Data.MySqlClient;
 
 namespace testeForm.dao
@@ -22,11 +23,11 @@ namespace testeForm.dao
                 comando.Parameters.AddWithValue("@raca", pet._raca);
                 comando.Parameters.AddWithValue("@fkIdDono", pet._dono);
                 comando.ExecuteNonQuery();
-                Console.WriteLine("Pet cadastrado com sucesso!");
+                MessageBox.Show("Pet cadastrado com sucesso!", "PetLover", MessageBoxButtons.OK);
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Erro ao salvar o cadastro!" + ex.Message);
+                MessageBox.Show("Erro ao salvar o cadastro! " + ex.Message, "PetLover", MessageBoxButtons.OK);
             }
         }
     }

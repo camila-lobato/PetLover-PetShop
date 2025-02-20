@@ -9,7 +9,7 @@ namespace testeForm.models
 {
     internal class Donos
     {
-        public string _idDono;
+        public int _idDono;
         public string _nome;
         public string _telefone;
         public string _cpf;

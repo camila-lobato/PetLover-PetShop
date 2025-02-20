@@ -39,13 +39,10 @@
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             iconPetShop = new PictureBox();
-            pictureBox2 = new PictureBox();
             txtTelefoneDono = new TextBox();
             lbTelefoneDono = new Label();
             txtNomeDono = new TextBox();
             lbNomeDono = new Label();
-            txtIdDono = new TextBox();
-            lbIdDono = new Label();
             lbCadDono = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -53,14 +50,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.SaddleBrown;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(492, 216);
+            pictureBox1.Location = new Point(450, 182);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(47, 51);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -69,7 +65,7 @@
             // 
             // txtCpfDono
             // 
-            txtCpfDono.Location = new Point(499, 269);
+            txtCpfDono.Location = new Point(457, 235);
             txtCpfDono.Name = "txtCpfDono";
             txtCpfDono.Size = new Size(237, 27);
             txtCpfDono.TabIndex = 63;
@@ -78,7 +74,7 @@
             // 
             lbCpfDono.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbCpfDono.ForeColor = SystemColors.Control;
-            lbCpfDono.Location = new Point(534, 205);
+            lbCpfDono.Location = new Point(492, 171);
             lbCpfDono.Name = "lbCpfDono";
             lbCpfDono.Size = new Size(66, 64);
             lbCpfDono.TabIndex = 62;
@@ -108,6 +104,7 @@
             btCancelarDono.Text = "CANCELAR";
             btCancelarDono.TextAlign = ContentAlignment.MiddleRight;
             btCancelarDono.UseVisualStyleBackColor = false;
+            btCancelarDono.Click += btCancelarDono_Click;
             // 
             // iconLista
             // 
@@ -132,12 +129,13 @@
             btSalvarDono.Text = "SALVAR";
             btSalvarDono.TextAlign = ContentAlignment.MiddleRight;
             btSalvarDono.UseVisualStyleBackColor = false;
+            btSalvarDono.Click += btSalvarDono_Click;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.SaddleBrown;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(497, 113);
+            pictureBox4.Location = new Point(107, 242);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(32, 44);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -148,7 +146,7 @@
             // 
             pictureBox3.BackColor = Color.SaddleBrown;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(45, 224);
+            pictureBox3.Location = new Point(107, 121);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(41, 45);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -166,20 +164,9 @@
             iconPetShop.TabIndex = 55;
             iconPetShop.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.SaddleBrown;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(45, 119);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(32, 44);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 54;
-            pictureBox2.TabStop = false;
-            // 
             // txtTelefoneDono
             // 
-            txtTelefoneDono.Location = new Point(497, 163);
+            txtTelefoneDono.Location = new Point(107, 292);
             txtTelefoneDono.Name = "txtTelefoneDono";
             txtTelefoneDono.Size = new Size(237, 27);
             txtTelefoneDono.TabIndex = 53;
@@ -188,7 +175,7 @@
             // 
             lbTelefoneDono.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbTelefoneDono.ForeColor = SystemColors.Control;
-            lbTelefoneDono.Location = new Point(532, 100);
+            lbTelefoneDono.Location = new Point(142, 229);
             lbTelefoneDono.Name = "lbTelefoneDono";
             lbTelefoneDono.Size = new Size(131, 64);
             lbTelefoneDono.TabIndex = 52;
@@ -197,7 +184,7 @@
             // 
             // txtNomeDono
             // 
-            txtNomeDono.Location = new Point(45, 274);
+            txtNomeDono.Location = new Point(107, 171);
             txtNomeDono.Name = "txtNomeDono";
             txtNomeDono.Size = new Size(237, 27);
             txtNomeDono.TabIndex = 51;
@@ -206,30 +193,12 @@
             // 
             lbNomeDono.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbNomeDono.ForeColor = SystemColors.Control;
-            lbNomeDono.Location = new Point(80, 216);
+            lbNomeDono.Location = new Point(142, 113);
             lbNomeDono.Name = "lbNomeDono";
             lbNomeDono.Size = new Size(93, 64);
             lbNomeDono.TabIndex = 50;
             lbNomeDono.Text = "Nome";
             lbNomeDono.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // txtIdDono
-            // 
-            txtIdDono.Location = new Point(45, 169);
-            txtIdDono.Name = "txtIdDono";
-            txtIdDono.Size = new Size(237, 27);
-            txtIdDono.TabIndex = 49;
-            // 
-            // lbIdDono
-            // 
-            lbIdDono.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbIdDono.ForeColor = SystemColors.Control;
-            lbIdDono.Location = new Point(80, 106);
-            lbIdDono.Name = "lbIdDono";
-            lbIdDono.Size = new Size(48, 64);
-            lbIdDono.TabIndex = 48;
-            lbIdDono.Text = "ID";
-            lbIdDono.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbCadDono
             // 
@@ -258,13 +227,10 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(iconPetShop);
-            Controls.Add(pictureBox2);
             Controls.Add(txtTelefoneDono);
             Controls.Add(lbTelefoneDono);
             Controls.Add(txtNomeDono);
             Controls.Add(lbNomeDono);
-            Controls.Add(txtIdDono);
-            Controls.Add(lbIdDono);
             Controls.Add(lbCadDono);
             Name = "CadastroDonos";
             Text = "CadastroDonos";
@@ -274,7 +240,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -291,13 +256,10 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox iconPetShop;
-        private PictureBox pictureBox2;
         private TextBox txtTelefoneDono;
         private Label lbTelefoneDono;
         private TextBox txtNomeDono;
         private Label lbNomeDono;
-        private TextBox txtIdDono;
-        private Label lbIdDono;
         private Label lbCadDono;
     }
 }

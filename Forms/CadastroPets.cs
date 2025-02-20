@@ -22,7 +22,7 @@ namespace testeForm.Forms
 
         private void btSalvarPet_Click(object sender, EventArgs e)
         {
-            if (txtDonoPet != null && txtIdadePet!=null && txtRacaPet!=null && txtEspeciePet!=null && txtDonoPet!= null) 
+            if(!txtNomePet.Equals("") && !txtIdadePet.Equals("") && !txtRacaPet.Equals("") && !txtEspeciePet.Equals("") && !txtDonoPet.Equals(""))
             {
                 petsDao pDao = new petsDao();
                 Pets pet = new Pets();
@@ -32,20 +32,14 @@ namespace testeForm.Forms
                 pet._especie = txtEspeciePet.Text;
                 pet._dono._nome = txtDonoPet.Text;
                 pDao.InsertPet(pet);
-
-                txtNomePet.Clear();
-                txtIdadePet.Clear();
-                txtRacaPet.Clear();
-                txtEspeciePet.Clear();
-                txtDonoPet.Clear();
-                txtNomePet.Select();
-
             }
             else
             {
-                Console.WriteLine("Preencha todos os dados corretamente!");
+                MessageBox.Show("Preencha todos os dados corretamente!", "PetLover",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+                
+
+
 
         }
 

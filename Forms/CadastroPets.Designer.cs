@@ -45,13 +45,10 @@
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             iconPetShop = new PictureBox();
-            pictureBox2 = new PictureBox();
             txtIdadePet = new TextBox();
             lbIdadePet = new Label();
             txtNomePet = new TextBox();
             lbNomePet = new Label();
-            txtIdPet = new TextBox();
-            lbIdPet = new Label();
             lbCadPet = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -61,14 +58,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.SaddleBrown;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(491, 274);
+            pictureBox1.Location = new Point(460, 219);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(47, 51);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -79,7 +75,7 @@
             // 
             pictureBox5.BackColor = Color.SaddleBrown;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(496, 169);
+            pictureBox5.Location = new Point(465, 114);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(32, 44);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -90,7 +86,7 @@
             // 
             pictureBox7.BackColor = Color.SaddleBrown;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(496, 71);
+            pictureBox7.Location = new Point(61, 285);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(32, 44);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
@@ -99,7 +95,7 @@
             // 
             // txtDonoPet
             // 
-            txtDonoPet.Location = new Point(496, 327);
+            txtDonoPet.Location = new Point(465, 272);
             txtDonoPet.Name = "txtDonoPet";
             txtDonoPet.Size = new Size(237, 27);
             txtDonoPet.TabIndex = 58;
@@ -108,7 +104,7 @@
             // 
             lbDono.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbDono.ForeColor = SystemColors.Control;
-            lbDono.Location = new Point(531, 264);
+            lbDono.Location = new Point(500, 209);
             lbDono.Name = "lbDono";
             lbDono.Size = new Size(93, 64);
             lbDono.TabIndex = 57;
@@ -117,7 +113,7 @@
             // 
             // txtRacaPet
             // 
-            txtRacaPet.Location = new Point(496, 219);
+            txtRacaPet.Location = new Point(465, 164);
             txtRacaPet.Name = "txtRacaPet";
             txtRacaPet.Size = new Size(237, 27);
             txtRacaPet.TabIndex = 56;
@@ -126,7 +122,7 @@
             // 
             lcRacaPet.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lcRacaPet.ForeColor = SystemColors.Control;
-            lcRacaPet.Location = new Point(531, 161);
+            lcRacaPet.Location = new Point(500, 106);
             lcRacaPet.Name = "lcRacaPet";
             lcRacaPet.Size = new Size(93, 64);
             lcRacaPet.TabIndex = 55;
@@ -135,7 +131,7 @@
             // 
             // txtEspeciePet
             // 
-            txtEspeciePet.Location = new Point(496, 121);
+            txtEspeciePet.Location = new Point(61, 335);
             txtEspeciePet.Name = "txtEspeciePet";
             txtEspeciePet.Size = new Size(237, 27);
             txtEspeciePet.TabIndex = 54;
@@ -144,7 +140,7 @@
             // 
             lbEspeciePet.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbEspeciePet.ForeColor = SystemColors.Control;
-            lbEspeciePet.Location = new Point(531, 58);
+            lbEspeciePet.Location = new Point(96, 272);
             lbEspeciePet.Name = "lbEspeciePet";
             lbEspeciePet.Size = new Size(117, 64);
             lbEspeciePet.TabIndex = 53;
@@ -205,7 +201,7 @@
             // 
             pictureBox4.BackColor = Color.SaddleBrown;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(35, 277);
+            pictureBox4.Location = new Point(61, 169);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(32, 44);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -216,7 +212,7 @@
             // 
             pictureBox3.BackColor = Color.SaddleBrown;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(35, 169);
+            pictureBox3.Location = new Point(61, 61);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(32, 44);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -234,20 +230,9 @@
             iconPetShop.TabIndex = 46;
             iconPetShop.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.SaddleBrown;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(35, 71);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(32, 44);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 45;
-            pictureBox2.TabStop = false;
-            // 
             // txtIdadePet
             // 
-            txtIdadePet.Location = new Point(35, 327);
+            txtIdadePet.Location = new Point(61, 219);
             txtIdadePet.Name = "txtIdadePet";
             txtIdadePet.Size = new Size(237, 27);
             txtIdadePet.TabIndex = 44;
@@ -256,7 +241,7 @@
             // 
             lbIdadePet.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbIdadePet.ForeColor = SystemColors.Control;
-            lbIdadePet.Location = new Point(70, 264);
+            lbIdadePet.Location = new Point(96, 156);
             lbIdadePet.Name = "lbIdadePet";
             lbIdadePet.Size = new Size(93, 64);
             lbIdadePet.TabIndex = 43;
@@ -265,7 +250,7 @@
             // 
             // txtNomePet
             // 
-            txtNomePet.Location = new Point(35, 219);
+            txtNomePet.Location = new Point(61, 111);
             txtNomePet.Name = "txtNomePet";
             txtNomePet.Size = new Size(237, 27);
             txtNomePet.TabIndex = 42;
@@ -274,30 +259,12 @@
             // 
             lbNomePet.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbNomePet.ForeColor = SystemColors.Control;
-            lbNomePet.Location = new Point(70, 161);
+            lbNomePet.Location = new Point(96, 53);
             lbNomePet.Name = "lbNomePet";
             lbNomePet.Size = new Size(93, 64);
             lbNomePet.TabIndex = 41;
             lbNomePet.Text = "nome";
             lbNomePet.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // txtIdPet
-            // 
-            txtIdPet.Location = new Point(35, 121);
-            txtIdPet.Name = "txtIdPet";
-            txtIdPet.Size = new Size(237, 27);
-            txtIdPet.TabIndex = 40;
-            // 
-            // lbIdPet
-            // 
-            lbIdPet.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbIdPet.ForeColor = SystemColors.Control;
-            lbIdPet.Location = new Point(70, 58);
-            lbIdPet.Name = "lbIdPet";
-            lbIdPet.Size = new Size(54, 64);
-            lbIdPet.TabIndex = 39;
-            lbIdPet.Text = "ID";
-            lbIdPet.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbCadPet
             // 
@@ -332,13 +299,10 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(iconPetShop);
-            Controls.Add(pictureBox2);
             Controls.Add(txtIdadePet);
             Controls.Add(lbIdadePet);
             Controls.Add(txtNomePet);
             Controls.Add(lbNomePet);
-            Controls.Add(txtIdPet);
-            Controls.Add(lbIdPet);
             Controls.Add(lbCadPet);
             Name = "CadastroPets";
             Text = "CadastroPets";
@@ -350,7 +314,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -373,13 +336,10 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox iconPetShop;
-        private PictureBox pictureBox2;
         private TextBox txtIdadePet;
         private Label lbIdadePet;
         private TextBox txtNomePet;
         private Label lbNomePet;
-        private TextBox txtIdPet;
-        private Label lbIdPet;
         private Label lbCadPet;
     }
 }

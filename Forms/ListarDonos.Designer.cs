@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarDonos));
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             btEditarDono = new Button();
             btExcluirDono = new Button();
             btPesquisaDono = new Button();
             txtPesquisaDono = new TextBox();
-            dtgListPets = new DataGridView();
+            dtgListDonos = new DataGridView();
             IdPet = new DataGridViewTextBoxColumn();
             NomePet = new DataGridViewTextBoxColumn();
             TelefoneDono = new DataGridViewTextBoxColumn();
             CpfDono = new DataGridViewTextBoxColumn();
             iconPetShop = new PictureBox();
             lbDonoCadastrado = new Label();
-            ((System.ComponentModel.ISupportInitialize)dtgListPets).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgListDonos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).BeginInit();
             SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             btEditarDono.Size = new Size(63, 60);
             btEditarDono.TabIndex = 58;
             btEditarDono.UseVisualStyleBackColor = false;
+            btEditarDono.Click += btEditarDono_Click;
             // 
             // btExcluirDono
             // 
@@ -63,6 +65,7 @@
             btExcluirDono.Size = new Size(63, 60);
             btExcluirDono.TabIndex = 57;
             btExcluirDono.UseVisualStyleBackColor = false;
+            btExcluirDono.Click += btExcluirDono_Click;
             // 
             // btPesquisaDono
             // 
@@ -73,6 +76,7 @@
             btPesquisaDono.Size = new Size(63, 60);
             btPesquisaDono.TabIndex = 56;
             btPesquisaDono.UseVisualStyleBackColor = false;
+            btPesquisaDono.Click += btPesquisaDono_Click;
             // 
             // txtPesquisaDono
             // 
@@ -81,20 +85,22 @@
             txtPesquisaDono.Size = new Size(432, 27);
             txtPesquisaDono.TabIndex = 55;
             // 
-            // dtgListPets
+            // dtgListDonos
             // 
-            dtgListPets.AllowUserToOrderColumns = true;
-            dtgListPets.BackgroundColor = SystemColors.HighlightText;
-            dtgListPets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgListPets.Columns.AddRange(new DataGridViewColumn[] { IdPet, NomePet, TelefoneDono, CpfDono });
-            dtgListPets.Location = new Point(64, 175);
-            dtgListPets.Name = "dtgListPets";
-            dtgListPets.RowHeadersWidth = 51;
-            dtgListPets.Size = new Size(673, 254);
-            dtgListPets.TabIndex = 54;
+            dtgListDonos.AllowUserToOrderColumns = true;
+            dtgListDonos.BackgroundColor = SystemColors.HighlightText;
+            dtgListDonos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgListDonos.Columns.AddRange(new DataGridViewColumn[] { IdPet, NomePet, TelefoneDono, CpfDono });
+            dtgListDonos.Location = new Point(64, 175);
+            dtgListDonos.Name = "dtgListDonos";
+            dtgListDonos.RowHeadersWidth = 51;
+            dtgListDonos.Size = new Size(673, 254);
+            dtgListDonos.TabIndex = 54;
             // 
             // IdPet
             // 
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            IdPet.DefaultCellStyle = dataGridViewCellStyle2;
             IdPet.FillWeight = 60F;
             IdPet.HeaderText = "ID";
             IdPet.MinimumWidth = 6;
@@ -154,12 +160,12 @@
             Controls.Add(btExcluirDono);
             Controls.Add(btPesquisaDono);
             Controls.Add(txtPesquisaDono);
-            Controls.Add(dtgListPets);
+            Controls.Add(dtgListDonos);
             Controls.Add(iconPetShop);
             Controls.Add(lbDonoCadastrado);
             Name = "ListarDonos";
             Text = "ListarDonos";
-            ((System.ComponentModel.ISupportInitialize)dtgListPets).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgListDonos).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -171,12 +177,12 @@
         private Button btExcluirDono;
         private Button btPesquisaDono;
         private TextBox txtPesquisaDono;
-        private DataGridView dtgListPets;
+        private DataGridView dtgListDonos;
+        private PictureBox iconPetShop;
+        private Label lbDonoCadastrado;
         private DataGridViewTextBoxColumn IdPet;
         private DataGridViewTextBoxColumn NomePet;
         private DataGridViewTextBoxColumn TelefoneDono;
         private DataGridViewTextBoxColumn CpfDono;
-        private PictureBox iconPetShop;
-        private Label lbDonoCadastrado;
     }
 }
