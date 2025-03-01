@@ -8,11 +8,11 @@ namespace testeForm.models
 {
     internal class Pets
     {
-        public string _idPet;
-        public string _nomePet;
-        public string _idade;
-        public string _especie;
-        public string _raca;
-        public Donos _dono = new Donos();
+        public int _idPet { get; set; }
+        public string _nomePet { get; set; }
+        public string _idade { get; set; }
+        public string _especie { get; set; }
+        public string _raca { get; set; }
+        public Donos _dono { get; set; }
     }
 }

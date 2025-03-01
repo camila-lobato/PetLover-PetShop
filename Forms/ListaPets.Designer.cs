@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaPets));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             btEditarPet = new Button();
             btExcluirPet = new Button();
             btPesquisaPet = new Button();
-            txtPesquisaPet = new TextBox();
             dtgListPets = new DataGridView();
             IdPet = new DataGridViewTextBoxColumn();
             NomePet = new DataGridViewTextBoxColumn();
@@ -48,6 +47,7 @@
             DonoPet = new DataGridViewTextBoxColumn();
             iconPetShop = new PictureBox();
             lbPetCadastrado = new Label();
+            btLimparGridPet = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgListPets).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).BeginInit();
             SuspendLayout();
@@ -59,8 +59,9 @@
             btEditarPet.Location = new Point(664, 98);
             btEditarPet.Name = "btEditarPet";
             btEditarPet.Size = new Size(63, 60);
-            btEditarPet.TabIndex = 51;
+            btEditarPet.TabIndex = 20;
             btEditarPet.UseVisualStyleBackColor = false;
+            btEditarPet.Click += btEditarPet_Click;
             // 
             // btExcluirPet
             // 
@@ -69,8 +70,9 @@
             btExcluirPet.Location = new Point(586, 98);
             btExcluirPet.Name = "btExcluirPet";
             btExcluirPet.Size = new Size(63, 60);
-            btExcluirPet.TabIndex = 50;
+            btExcluirPet.TabIndex = 19;
             btExcluirPet.UseVisualStyleBackColor = false;
+            btExcluirPet.Click += btExcluirPet_Click;
             // 
             // btPesquisaPet
             // 
@@ -79,15 +81,9 @@
             btPesquisaPet.Location = new Point(501, 98);
             btPesquisaPet.Name = "btPesquisaPet";
             btPesquisaPet.Size = new Size(63, 60);
-            btPesquisaPet.TabIndex = 49;
+            btPesquisaPet.TabIndex = 18;
             btPesquisaPet.UseVisualStyleBackColor = false;
-            // 
-            // txtPesquisaPet
-            // 
-            txtPesquisaPet.Location = new Point(63, 121);
-            txtPesquisaPet.Name = "txtPesquisaPet";
-            txtPesquisaPet.Size = new Size(432, 27);
-            txtPesquisaPet.TabIndex = 48;
+            btPesquisaPet.Click += btPesquisaPet_Click;
             // 
             // dtgListPets
             // 
@@ -103,8 +99,9 @@
             // 
             // IdPet
             // 
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            IdPet.DefaultCellStyle = dataGridViewCellStyle7;
+            IdPet.DataPropertyName = "_idPet";
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            IdPet.DefaultCellStyle = dataGridViewCellStyle1;
             IdPet.FillWeight = 60F;
             IdPet.HeaderText = "ID";
             IdPet.MinimumWidth = 6;
@@ -113,8 +110,9 @@
             // 
             // NomePet
             // 
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            NomePet.DefaultCellStyle = dataGridViewCellStyle8;
+            NomePet.DataPropertyName = "_nomePet";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            NomePet.DefaultCellStyle = dataGridViewCellStyle2;
             NomePet.HeaderText = "Nome";
             NomePet.MinimumWidth = 6;
             NomePet.Name = "NomePet";
@@ -122,8 +120,9 @@
             // 
             // IdadePet
             // 
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            IdadePet.DefaultCellStyle = dataGridViewCellStyle9;
+            IdadePet.DataPropertyName = "_idade";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            IdadePet.DefaultCellStyle = dataGridViewCellStyle3;
             IdadePet.HeaderText = "Idade";
             IdadePet.MinimumWidth = 6;
             IdadePet.Name = "IdadePet";
@@ -131,8 +130,9 @@
             // 
             // EspeciePet
             // 
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            EspeciePet.DefaultCellStyle = dataGridViewCellStyle10;
+            EspeciePet.DataPropertyName = "_especie";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            EspeciePet.DefaultCellStyle = dataGridViewCellStyle4;
             EspeciePet.HeaderText = "Espécie";
             EspeciePet.MinimumWidth = 6;
             EspeciePet.Name = "EspeciePet";
@@ -140,8 +140,9 @@
             // 
             // RacaPet
             // 
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            RacaPet.DefaultCellStyle = dataGridViewCellStyle11;
+            RacaPet.DataPropertyName = "_raca";
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            RacaPet.DefaultCellStyle = dataGridViewCellStyle5;
             RacaPet.HeaderText = "Raça";
             RacaPet.MinimumWidth = 6;
             RacaPet.Name = "RacaPet";
@@ -149,9 +150,10 @@
             // 
             // DonoPet
             // 
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            DonoPet.DefaultCellStyle = dataGridViewCellStyle12;
-            DonoPet.HeaderText = "Dono";
+            DonoPet.DataPropertyName = "_fkIdDono";
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DonoPet.DefaultCellStyle = dataGridViewCellStyle6;
+            DonoPet.HeaderText = "ID Dono";
             DonoPet.MinimumWidth = 6;
             DonoPet.Name = "DonoPet";
             DonoPet.Width = 125;
@@ -178,16 +180,27 @@
             lbPetCadastrado.Text = "PETS CADASTRADOS";
             lbPetCadastrado.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btLimparGridPet
+            // 
+            btLimparGridPet.BackColor = Color.Peru;
+            btLimparGridPet.Image = (Image)resources.GetObject("btLimparGridPet.Image");
+            btLimparGridPet.Location = new Point(416, 98);
+            btLimparGridPet.Name = "btLimparGridPet";
+            btLimparGridPet.Size = new Size(63, 60);
+            btLimparGridPet.TabIndex = 17;
+            btLimparGridPet.UseVisualStyleBackColor = false;
+            btLimparGridPet.Click += btLimparGridPet_Click;
+            // 
             // ListaPets
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SaddleBrown;
             ClientSize = new Size(800, 450);
+            Controls.Add(btLimparGridPet);
             Controls.Add(btEditarPet);
             Controls.Add(btExcluirPet);
             Controls.Add(btPesquisaPet);
-            Controls.Add(txtPesquisaPet);
             Controls.Add(dtgListPets);
             Controls.Add(iconPetShop);
             Controls.Add(lbPetCadastrado);
@@ -196,7 +209,6 @@
             ((System.ComponentModel.ISupportInitialize)dtgListPets).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -204,15 +216,15 @@
         private Button btEditarPet;
         private Button btExcluirPet;
         private Button btPesquisaPet;
-        private TextBox txtPesquisaPet;
         private DataGridView dtgListPets;
+        private PictureBox iconPetShop;
+        private Label lbPetCadastrado;
+        private Button btLimparGridPet;
         private DataGridViewTextBoxColumn IdPet;
         private DataGridViewTextBoxColumn NomePet;
         private DataGridViewTextBoxColumn IdadePet;
         private DataGridViewTextBoxColumn EspeciePet;
         private DataGridViewTextBoxColumn RacaPet;
         private DataGridViewTextBoxColumn DonoPet;
-        private PictureBox iconPetShop;
-        private Label lbPetCadastrado;
     }
 }

@@ -56,14 +56,17 @@ namespace testeForm.dao
                 var sql = "SELECT * FROM Donos ORDER BY nome";
                 MySqlCommand comando = new MySqlCommand(sql, Conexao.Conectar());
                 MySqlDataReader reader = comando.ExecuteReader();
-                while(reader.Read())
+                
+                while (reader.Read())
                 {
                     Donos dono = new Donos();
                     dono._idDono = reader.GetInt32("idDono");
                     dono._nome = reader.GetString("nome");
                     dono._telefone = reader.GetString("telefone");
                     dono._cpf = reader.GetString("cpf");
+                    Listadonos.Add(dono);
                 }
+                
                 Conexao.FecharConexao();
             }catch (Exception ex) 
             {
@@ -76,17 +79,25 @@ namespace testeForm.dao
         {
             try
             {
-                string sql = "UPDATE Donos SET nome = @nomeDono, telefone = @telefoneDono, cpf = @cpfDono WHERE idDono = @idDono";
-                MySqlCommand comando = new MySqlCommand(sql, Conexao.Conectar());
-                comando.Parameters.AddWithValue("@nome", dono._nome);
-                comando.Parameters.AddWithValue("@telefone", dono._telefone);
-                comando.Parameters.AddWithValue("@cpf", dono._cpf);
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Cadastro atualizado com sucesso!", "PetLover", MessageBoxButtons.OK);
+                string sql = "UPDATE Donos SET idDono = @idDono, nome = @nomeDono, telefone = @telefoneDono, cpf = @cpfDono WHERE idDono = @idDono";
+                using MySqlCommand comando = new MySqlCommand(sql, Conexao.Conectar());
+                {
+                    comando.Parameters.AddWithValue("@idDono", dono._idDono);
+                    comando.Parameters.AddWithValue("@nomeDono", dono._nome);
+                    comando.Parameters.AddWithValue("@telefoneDono", dono._telefone);
+                    comando.Parameters.AddWithValue("@cpfDono", dono._cpf);
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Cadastro atualizado com sucesso!", "PetLover", MessageBoxButtons.OK);
+                }
+               
             }
             catch (Exception ex)
             {
                 throw new Exception("Erro ao atualizar cadastro" + ex.Message);
+            }
+            finally
+            {
+                Conexao.FecharConexao();
             }
         }
     }

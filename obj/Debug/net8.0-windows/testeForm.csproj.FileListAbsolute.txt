@@ -46,3 +46,5 @@ C:\Users\Camila Lobato\OneDrive - ifro.edu.br\Área de Trabalho\IFRO\terceiro pe
 C:\Users\Camila Lobato\OneDrive - ifro.edu.br\Área de Trabalho\IFRO\terceiro período\programação orientada a objeto\testeForm\obj\Debug\net8.0-windows\testeForm.csproj.AssemblyReference.cache
 C:\Users\Camila Lobato\OneDrive - ifro.edu.br\Área de Trabalho\IFRO\terceiro período\programação orientada a objeto\testeForm\obj\Debug\net8.0-windows\testeForm.sourcelink.json
 C:\Users\Camila Lobato\OneDrive - ifro.edu.br\Área de Trabalho\IFRO\terceiro período\programação orientada a objeto\testeForm\obj\Debug\net8.0-windows\testeForm.csproj.CopyComplete
+C:\Users\Camila Lobato\OneDrive - ifro.edu.br\Área de Trabalho\IFRO\terceiro período\programação orientada a objeto\testeForm\obj\Debug\net8.0-windows\testeForm.Forms.EditarDonos.resources
+C:\Users\Camila Lobato\OneDrive - ifro.edu.br\Área de Trabalho\IFRO\terceiro período\programação orientada a objeto\testeForm\obj\Debug\net8.0-windows\testeForm.Forms.EditarPets.resources

@@ -22,23 +22,22 @@ namespace testeForm.Forms
 
         private void btSalvarPet_Click(object sender, EventArgs e)
         {
-            if(!txtNomePet.Equals("") && !txtIdadePet.Equals("") && !txtRacaPet.Equals("") && !txtEspeciePet.Equals("") && !txtDonoPet.Equals(""))
+            if (!txtNomePet.Equals("") || !txtIdadePet.Equals("") || !txtRacaPet.Equals("") || !txtEspeciePet.Equals("") || !cbDonos.Equals(""))
             {
                 petsDao pDao = new petsDao();
                 Pets pet = new Pets();
+                int idDonoSelecionado = Convert.ToInt32(cbDonos.SelectedValue);
                 pet._nomePet = txtNomePet.Text;
                 pet._idade = txtIdadePet.Text;
                 pet._raca = txtRacaPet.Text;
                 pet._especie = txtEspeciePet.Text;
-                pet._dono._nome = txtDonoPet.Text;
+                pet._dono = (Donos)cbDonos.SelectedItem;
                 pDao.InsertPet(pet);
             }
             else
             {
-                MessageBox.Show("Preencha todos os dados corretamente!", "PetLover",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Preencha todos os dados corretamente!", "PetLover", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                
-
 
 
         }
@@ -49,8 +48,35 @@ namespace testeForm.Forms
             txtIdadePet.Clear();
             txtRacaPet.Clear();
             txtEspeciePet.Clear();
-            txtDonoPet.Clear();
+            cbDonos.Visible = false;
             this.Close();
+        }
+
+        private void cbDonos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void DonosCb()
+        {
+            donosDao dDao = new donosDao();
+            List<Donos> listDonos = dDao.ListarDonos();
+            
+            Donos dono = new Donos();
+            if(listDonos== null || listDonos.Count == 0)
+            {
+                MessageBox.Show("Nenhum cadastro de dono encontrado no banco!", "PetLover", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            cbDonos.DataSource = null;
+            cbDonos.DataSource = listDonos;
+            cbDonos.DisplayMember = "_nome";
+            cbDonos.ValueMember = "_idDono";
+            cbDonos.SelectedIndex = -1;
+
+        }
+
+        private void CadastroPets_Load(object sender, EventArgs e)
+        {
+            DonosCb();
         }
     }
 }
