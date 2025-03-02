@@ -33,7 +33,7 @@ namespace testeForm.Forms
             Donos dono = new Donos();
             List<Donos> listaDonos = new List<Donos>();
 
-            if (!txtNomeDono.Equals("") || !txtTelefoneDono.Equals("") || !txtCpfDono.Equals(""))
+            if (txtNomeDono.Text.Trim() != "" && txtTelefoneDono.Text.Trim() != "" && txtCpfDono.Text.Trim() != "")
             {
 
                 dono._nome = txtNomeDono.Text;
@@ -47,7 +47,6 @@ namespace testeForm.Forms
                 txtNomeDono.Clear();
                 txtTelefoneDono.Clear();
                 txtCpfDono.Clear();
-
                 AtualizarListaDonos();
             }
             else

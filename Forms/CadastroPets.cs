@@ -20,9 +20,15 @@ namespace testeForm.Forms
             InitializeComponent();
         }
 
+        public void AtualizarListaPets()
+        {
+            List<Pets> listPets = new List<Pets>();
+            petsDao petsDao = new petsDao();
+            listPets = petsDao.ListarPets();
+        }
         private void btSalvarPet_Click(object sender, EventArgs e)
         {
-            if (!txtNomePet.Equals("") || !txtIdadePet.Equals("") || !txtRacaPet.Equals("") || !txtEspeciePet.Equals("") || !cbDonos.Equals(""))
+            if (txtNomePet.Text.Trim() != "" && txtIdadePet.Text.Trim() != "" && txtRacaPet.Text.Trim() != "" && txtEspeciePet.Text.Trim() != "" && cbDonos.SelectedIndex != -1)
             {
                 petsDao pDao = new petsDao();
                 Pets pet = new Pets();
@@ -33,13 +39,18 @@ namespace testeForm.Forms
                 pet._especie = txtEspeciePet.Text;
                 pet._dono = (Donos)cbDonos.SelectedItem;
                 pDao.InsertPet(pet);
+                txtNomePet.Clear();
+                txtIdadePet.Clear();
+                txtRacaPet.Clear();
+                txtEspeciePet.Clear();
+                cbDonos.SelectedIndex = -1;
+                AtualizarListaPets();
+
             }
             else
             {
                 MessageBox.Show("Preencha todos os dados corretamente!", "PetLover", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
         private void btCancelarPet_Click(object sender, EventArgs e)
@@ -48,7 +59,7 @@ namespace testeForm.Forms
             txtIdadePet.Clear();
             txtRacaPet.Clear();
             txtEspeciePet.Clear();
-            cbDonos.Visible = false;
+            cbDonos.SelectedIndex = -1;
             this.Close();
         }
 

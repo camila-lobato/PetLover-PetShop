@@ -202,9 +202,6 @@
   <metadata name="RacaPet.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="DonoPet.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="iconPetShop.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -709,7 +706,7 @@
   <data name="btLimparGridPet.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPfSURBVFhH3Zdb
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPfSURBVFhH3Zdb
         TBRXGMf3MpedwQurNawsyi4KWGpAhaDBxYiXFi8r4IOBjaBUY2oUqbFKJNBgGmSNCYEHFbSJKUa8YWxi
         UkOMIeCDNyRxDU0fIOmWNqF9QIVY1hl2vn7ndNgudF3sdgxN/8kv58w5Z8733zMz53yr+6/JyfO812Qy
         /fwvuKbOFZGqbDab1NzcDJFQWloKgiD8ps4VkaoyMzNHIUK1tLRoa2B4eBj6+/vDMjAwoI5+DwZcLhdg

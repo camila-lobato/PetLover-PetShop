@@ -34,7 +34,6 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             btEditarPet = new Button();
             btExcluirPet = new Button();
             btPesquisaPet = new Button();
@@ -44,7 +43,6 @@
             IdadePet = new DataGridViewTextBoxColumn();
             EspeciePet = new DataGridViewTextBoxColumn();
             RacaPet = new DataGridViewTextBoxColumn();
-            DonoPet = new DataGridViewTextBoxColumn();
             iconPetShop = new PictureBox();
             lbPetCadastrado = new Label();
             btLimparGridPet = new Button();
@@ -90,11 +88,11 @@
             dtgListPets.AllowUserToOrderColumns = true;
             dtgListPets.BackgroundColor = SystemColors.HighlightText;
             dtgListPets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgListPets.Columns.AddRange(new DataGridViewColumn[] { IdPet, NomePet, IdadePet, EspeciePet, RacaPet, DonoPet });
-            dtgListPets.Location = new Point(64, 175);
+            dtgListPets.Columns.AddRange(new DataGridViewColumn[] { IdPet, NomePet, IdadePet, EspeciePet, RacaPet });
+            dtgListPets.Location = new Point(81, 175);
             dtgListPets.Name = "dtgListPets";
             dtgListPets.RowHeadersWidth = 51;
-            dtgListPets.Size = new Size(673, 254);
+            dtgListPets.Size = new Size(637, 254);
             dtgListPets.TabIndex = 47;
             // 
             // IdPet
@@ -106,7 +104,7 @@
             IdPet.HeaderText = "ID";
             IdPet.MinimumWidth = 6;
             IdPet.Name = "IdPet";
-            IdPet.Width = 60;
+            IdPet.Width = 80;
             // 
             // NomePet
             // 
@@ -116,7 +114,7 @@
             NomePet.HeaderText = "Nome";
             NomePet.MinimumWidth = 6;
             NomePet.Name = "NomePet";
-            NomePet.Width = 125;
+            NomePet.Width = 150;
             // 
             // IdadePet
             // 
@@ -126,7 +124,7 @@
             IdadePet.HeaderText = "Idade";
             IdadePet.MinimumWidth = 6;
             IdadePet.Name = "IdadePet";
-            IdadePet.Width = 60;
+            IdadePet.Width = 80;
             // 
             // EspeciePet
             // 
@@ -146,17 +144,7 @@
             RacaPet.HeaderText = "Raça";
             RacaPet.MinimumWidth = 6;
             RacaPet.Name = "RacaPet";
-            RacaPet.Width = 125;
-            // 
-            // DonoPet
-            // 
-            DonoPet.DataPropertyName = "_fkIdDono";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            DonoPet.DefaultCellStyle = dataGridViewCellStyle6;
-            DonoPet.HeaderText = "ID Dono";
-            DonoPet.MinimumWidth = 6;
-            DonoPet.Name = "DonoPet";
-            DonoPet.Width = 125;
+            RacaPet.Width = 150;
             // 
             // iconPetShop
             // 
@@ -225,6 +213,5 @@
         private DataGridViewTextBoxColumn IdadePet;
         private DataGridViewTextBoxColumn EspeciePet;
         private DataGridViewTextBoxColumn RacaPet;
-        private DataGridViewTextBoxColumn DonoPet;
     }
 }

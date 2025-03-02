@@ -39,7 +39,7 @@ namespace testeForm.dao
                 Pets pet = new Pets();
                 string sqlDeletar = "DELETE FROM pets WHERE idPet = @idPet";
                 MySqlCommand comando = new MySqlCommand(sqlDeletar, Conexao.Conectar());
-                comando.Parameters.AddWithValue("@idPet", pet._idPet);
+                comando.Parameters.AddWithValue("@idPet", idPet);
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Cadastro excluído com sucesso!");
                 Conexao.FecharConexao();
@@ -56,7 +56,9 @@ namespace testeForm.dao
             List<Pets> ListaPets = new List<Pets>();
             try
             {
-                var sql = "SELECT * FROM Pets ORDER BY nomePet";
+
+                var sql = "SELECT Pets.idPet, Pets.nomePet, Pets.idade, Pets.especie, Pets.raca FROM Pets ORDER BY nomePet";
+
                 MySqlCommand comando = new MySqlCommand(sql, Conexao.Conectar());
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
@@ -66,9 +68,7 @@ namespace testeForm.dao
                     pet._nomePet = reader.GetString("nomePet");
                     pet._idade = reader.GetString("idade");
                     pet._especie = reader.GetString("especie");
-                    pet._raca = reader.GetString("raca");
-                    int idDono = reader.GetInt32("fkIdDono");
-                    pet._dono = new Donos { _idDono = idDono };
+                    pet._raca = reader.GetString("raca"); 
                     ListaPets.Add(pet);
                 }
                 Conexao.FecharConexao();

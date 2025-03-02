@@ -288,7 +288,7 @@
             // 
             pictureBox2.BackColor = Color.SaddleBrown;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(450, 280);
+            pictureBox2.Location = new Point(460, 280);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(32, 44);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -297,7 +297,7 @@
             // 
             // txtIdPet
             // 
-            txtIdPet.Location = new Point(450, 330);
+            txtIdPet.Location = new Point(460, 330);
             txtIdPet.Name = "txtIdPet";
             txtIdPet.Size = new Size(237, 27);
             txtIdPet.TabIndex = 84;
@@ -306,7 +306,7 @@
             // 
             lbIdPet.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbIdPet.ForeColor = SystemColors.Control;
-            lbIdPet.Location = new Point(485, 267);
+            lbIdPet.Location = new Point(495, 267);
             lbIdPet.Name = "lbIdPet";
             lbIdPet.Size = new Size(42, 64);
             lbIdPet.TabIndex = 85;

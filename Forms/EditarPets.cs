@@ -19,13 +19,15 @@ namespace testeForm.Forms
             InitializeComponent();
         }
 
-        
+       
         private void btCancelarEditPets_Click(object sender, EventArgs e)
         {
             txtNomePet.Clear();
             txtIdadePet.Clear();
             txtEspeciePet.Clear();
             txtRacaPet.Clear();
+            txtIdadePet.Clear();
+            cbDonoEditarPet.SelectedIndex = -1;
             this.Close();
         }
         public void DonosEditarCb()
@@ -41,6 +43,7 @@ namespace testeForm.Forms
             cbDonoEditarPet.DataSource = listDonos;
             cbDonoEditarPet.DisplayMember = "_nome";
             cbDonoEditarPet.ValueMember = "_idDono";
+            cbDonoEditarPet.SelectedIndex = -1;
 
         }
 
@@ -51,7 +54,7 @@ namespace testeForm.Forms
             petsDao pDao = new petsDao();
             Pets pet = new Pets();
 
-            if (!txtNomePet.Equals("") || !txtIdadePet.Equals("") || !txtRacaPet.Equals("") || !txtEspeciePet.Equals("") || !cbDonoEditarPet.Equals(""))
+            if (txtIdPet.Text.Trim() != "" && txtNomePet.Text.Trim() != "" && txtIdadePet.Text.Trim() != "" && txtRacaPet.Text.Trim() != "" && txtEspeciePet.Text.Trim() != "" && cbDonoEditarPet.SelectedIndex != -1)
             {
                 pet._idPet = Convert.ToInt32(txtIdPet.Text);
                 int idDonoSelecionado = Convert.ToInt32(cbDonoEditarPet.SelectedValue);
@@ -61,6 +64,12 @@ namespace testeForm.Forms
                 pet._especie = txtEspeciePet.Text;
                 pet._dono = (Donos)cbDonoEditarPet.SelectedItem;
                 pDao.UpdatePets(pet);
+                txtNomePet.Clear();
+                txtIdadePet.Clear();
+                txtEspeciePet.Clear();
+                txtRacaPet.Clear();
+                txtIdadePet.Clear();
+                cbDonoEditarPet.SelectedIndex = -1;       
             }
             else
             {

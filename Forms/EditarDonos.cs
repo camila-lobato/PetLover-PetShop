@@ -19,11 +19,13 @@ namespace testeForm.Forms
             InitializeComponent();
         }
 
+
         private void btCancelarDono_Click(object sender, EventArgs e)
         {
             txtNomeDono.Clear();
             txtTelefoneDono.Clear();
             txtCpfDono.Clear();
+            txtIdDono.Clear();
             this.Close();
         }
 
@@ -32,7 +34,7 @@ namespace testeForm.Forms
             donosDao dDao = new donosDao();
             Donos dono = new Donos();
 
-            if (!txtNomeDono.Equals("") || !txtTelefoneDono.Equals("") || !txtCpfDono.Equals(""))
+            if (txtIdDono.Text.Trim() != "" && txtNomeDono.Text.Trim() != "" && txtTelefoneDono.Text.Trim() != "" && txtCpfDono.Text.Trim() != "")
             {
                 dono._idDono = Convert.ToInt32(txtIdDono.Text);
                 dono._nome = txtNomeDono.Text;
@@ -42,13 +44,21 @@ namespace testeForm.Forms
                 txtTelefoneDono.Clear();
                 txtCpfDono.Clear();
                 dDao.UpdateDono(dono);
-
+                txtNomeDono.Clear();
+                txtTelefoneDono.Clear();
+                txtCpfDono.Clear();
+                txtIdDono.Clear();
             }
             else
             {
                 MessageBox.Show("Preencha todos os dados corretamente!", "PetLover", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+
+        }
+
+        private void iconLista_Click(object sender, EventArgs e)
+        {
 
         }
     }

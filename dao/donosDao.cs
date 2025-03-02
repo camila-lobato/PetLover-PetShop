@@ -36,16 +36,20 @@ namespace testeForm.dao
                 Donos dono = new Donos();
                 string sqlDeletar = "DELETE FROM donos WHERE idDono = @idDono";
                 MySqlCommand comando = new MySqlCommand(sqlDeletar, Conexao.Conectar());
-                comando.Parameters.AddWithValue("@idDono", dono._idDono);
+                comando.Parameters.AddWithValue("@idDono", idDono);
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Cadastro excluído com sucesso!");
-                Conexao.FecharConexao();
+                
             }
             catch (Exception ex)
             {
                 throw new Exception($"Erro ao excluir cadastro: {ex.Message}.");
             }
-           
+            finally
+            {
+                Conexao.FecharConexao();
+            }
+
         }
 
         public List <Donos> ListarDonos()

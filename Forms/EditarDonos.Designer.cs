@@ -120,6 +120,7 @@
             iconLista.SizeMode = PictureBoxSizeMode.Zoom;
             iconLista.TabIndex = 76;
             iconLista.TabStop = false;
+            iconLista.Click += iconLista_Click;
             // 
             // btAlterarDono
             // 

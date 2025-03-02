@@ -18,6 +18,21 @@ namespace testeForm.Forms
         public ListarDonos()
         {
             InitializeComponent();
+            AtualizarListaDonos();
+           dtgListDonos.CellClick += new DataGridViewCellEventHandler(dtgListDonos_CellClick);
+        }
+        private void AtualizarListaDonos()
+        {
+            donosDao donosDao = new donosDao();
+            List<Donos> ListDonos = donosDao.ListarDonos();
+            dtgListDonos.DataSource = null;
+            dtgListDonos.DataSource = ListDonos;
+            dtgListDonos.Refresh();
+        }
+
+        private void DtgListDonos_CellClick(object? sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void btPesquisaDono_Click(object sender, EventArgs e)
@@ -27,6 +42,7 @@ namespace testeForm.Forms
             List<Donos> listDonos = dDao.ListarDonos();
             dtgListDonos.DataSource = null;
             dtgListDonos.DataSource = listDonos;
+            AtualizarListaDonos();
 
         }
 
@@ -34,32 +50,41 @@ namespace testeForm.Forms
         {
             EditarDonos form = new EditarDonos();
             form.ShowDialog();
+            AtualizarListaDonos();
         }
         private void btExcluirDono_Click(object sender, EventArgs e)
         {
-
-            Donos donos = new Donos();
-            donosDao dDao = new donosDao();
-            int linha = dtgListDonos.CurrentRow.Index;
-            int qtdLinhas = dtgListDonos.RowCount;
-            if (qtdLinhas > 1)
+            if (dtgListDonos.CurrentRow != null)
             {
-                DialogResult resp = MessageBox.Show("Deseja deletar o cadastro selecionado? ", "PetLover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (resp == DialogResult.Yes)
+                int idDonoSelecionado = Convert.ToInt32(dtgListDonos.CurrentRow.Cells[0].Value);
+                DialogResult resp = MessageBox.Show("Deseja deletar o cadastro selecionado?", "PetLover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(resp == DialogResult.Yes)
                 {
-                    
-                    donos._idDono = Convert.ToInt32(Console.ReadLine());
-                    dDao.DeleteDono(donos._idDono);
+                    donosDao donosDao = new donosDao();
+                    donosDao.DeleteDono(idDonoSelecionado);
+                    AtualizarListaDonos();
+                }
+                else
+                {
+                    MessageBox.Show("Nenhum cadastro válido selecionado para exclusão", "PetLover", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 }
             }
-
         }
 
         private void btLimparGrid_Click(object sender, EventArgs e)
         {
-            dtgListDonos.DataSource=null;
+            dtgListDonos.DataSource = null;
             dtgListDonos.Rows.Clear();
+        }
+
+        private void dtgListDonos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgListDonos.Rows[e.RowIndex];
+                int idDonoSelecionado = Convert.ToInt32(row.Cells[0].Value);
+                ;
+            }
         }
     }
 }
