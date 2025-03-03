@@ -72,7 +72,7 @@
             txtCpfDono.Location = new Point(428, 168);
             txtCpfDono.Name = "txtCpfDono";
             txtCpfDono.Size = new Size(237, 27);
-            txtCpfDono.TabIndex = 67;
+            txtCpfDono.TabIndex = 35;
             // 
             // lbCpfDono
             // 
@@ -104,7 +104,7 @@
             btCancelarDono.Location = new Point(305, 375);
             btCancelarDono.Name = "btCancelarDono";
             btCancelarDono.Size = new Size(182, 65);
-            btCancelarDono.TabIndex = 69;
+            btCancelarDono.TabIndex = 38;
             btCancelarDono.Text = "CANCELAR";
             btCancelarDono.TextAlign = ContentAlignment.MiddleRight;
             btCancelarDono.UseVisualStyleBackColor = false;
@@ -130,7 +130,7 @@
             btAlterarDono.Location = new Point(542, 375);
             btAlterarDono.Name = "btAlterarDono";
             btAlterarDono.Size = new Size(182, 65);
-            btAlterarDono.TabIndex = 68;
+            btAlterarDono.TabIndex = 37;
             btAlterarDono.Text = "ALTERAR";
             btAlterarDono.TextAlign = ContentAlignment.MiddleRight;
             btAlterarDono.UseVisualStyleBackColor = false;
@@ -174,7 +174,7 @@
             txtTelefoneDono.Location = new Point(76, 292);
             txtTelefoneDono.Name = "txtTelefoneDono";
             txtTelefoneDono.Size = new Size(237, 27);
-            txtTelefoneDono.TabIndex = 66;
+            txtTelefoneDono.TabIndex = 34;
             // 
             // lbTelefoneDono
             // 
@@ -192,7 +192,7 @@
             txtNomeDono.Location = new Point(76, 171);
             txtNomeDono.Name = "txtNomeDono";
             txtNomeDono.Size = new Size(237, 27);
-            txtNomeDono.TabIndex = 65;
+            txtNomeDono.TabIndex = 33;
             // 
             // lbNomeDono
             // 
@@ -232,7 +232,7 @@
             txtIdDono.Location = new Point(428, 289);
             txtIdDono.Name = "txtIdDono";
             txtIdDono.Size = new Size(237, 27);
-            txtIdDono.TabIndex = 80;
+            txtIdDono.TabIndex = 36;
             // 
             // lbIdDono
             // 

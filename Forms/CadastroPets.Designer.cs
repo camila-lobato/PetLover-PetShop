@@ -278,7 +278,7 @@
             cbDonos.Location = new Point(465, 295);
             cbDonos.Name = "cbDonos";
             cbDonos.Size = new Size(237, 28);
-            cbDonos.TabIndex = 62;
+            cbDonos.TabIndex = 9;
             cbDonos.SelectedIndexChanged += cbDonos_SelectedIndexChanged;
             // 
             // CadastroPets

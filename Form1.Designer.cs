@@ -41,6 +41,7 @@
             iconLista2 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconCachorro).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconDono).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPetShop).BeginInit();
@@ -190,12 +191,24 @@
             label2.Text = "CADASTROS";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(596, 418);
+            label3.Name = "label3";
+            label3.Size = new Size(192, 18);
+            label3.TabIndex = 12;
+            label3.Text = "CAMILA LOBATO MOREIRA";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SaddleBrown;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(iconLista2);
@@ -217,6 +230,7 @@
             ((System.ComponentModel.ISupportInitialize)iconLista).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconLista2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -233,5 +247,6 @@
         private PictureBox iconLista2;
         private Label label1;
         private Label label2;
+        private Label label3;
     }
 }

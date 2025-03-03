@@ -69,6 +69,7 @@ namespace testeForm.Forms
                 txtEspeciePet.Clear();
                 txtRacaPet.Clear();
                 txtIdadePet.Clear();
+                txtIdPet.Clear();
                 cbDonoEditarPet.SelectedIndex = -1;       
             }
             else

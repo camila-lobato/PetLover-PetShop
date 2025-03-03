@@ -71,12 +71,7 @@ namespace testeForm.Forms
         {
             donosDao dDao = new donosDao();
             List<Donos> listDonos = dDao.ListarDonos();
-            
             Donos dono = new Donos();
-            if(listDonos== null || listDonos.Count == 0)
-            {
-                MessageBox.Show("Nenhum cadastro de dono encontrado no banco!", "PetLover", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             cbDonos.DataSource = null;
             cbDonos.DataSource = listDonos;
             cbDonos.DisplayMember = "_nome";

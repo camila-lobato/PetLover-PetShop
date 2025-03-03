@@ -113,7 +113,7 @@
             txtRacaPet.Location = new Point(463, 129);
             txtRacaPet.Name = "txtRacaPet";
             txtRacaPet.Size = new Size(237, 27);
-            txtRacaPet.TabIndex = 65;
+            txtRacaPet.TabIndex = 28;
             // 
             // lcRacaPet
             // 
@@ -131,7 +131,7 @@
             txtEspeciePet.Location = new Point(59, 353);
             txtEspeciePet.Name = "txtEspeciePet";
             txtEspeciePet.Size = new Size(237, 27);
-            txtEspeciePet.TabIndex = 64;
+            txtEspeciePet.TabIndex = 27;
             // 
             // lbEspeciePet
             // 
@@ -171,7 +171,7 @@
             txtIdadePet.Location = new Point(59, 237);
             txtIdadePet.Name = "txtIdadePet";
             txtIdadePet.Size = new Size(237, 27);
-            txtIdadePet.TabIndex = 63;
+            txtIdadePet.TabIndex = 26;
             // 
             // lbIdadePet
             // 
@@ -189,7 +189,7 @@
             txtNomePet.Location = new Point(59, 129);
             txtNomePet.Name = "txtNomePet";
             txtNomePet.Size = new Size(237, 27);
-            txtNomePet.TabIndex = 62;
+            txtNomePet.TabIndex = 25;
             // 
             // lbNomePet
             // 
@@ -243,7 +243,7 @@
             btCancelarEditPets.Location = new Point(345, 373);
             btCancelarEditPets.Name = "btCancelarEditPets";
             btCancelarEditPets.Size = new Size(182, 65);
-            btCancelarEditPets.TabIndex = 80;
+            btCancelarEditPets.TabIndex = 32;
             btCancelarEditPets.Text = "CANCELAR";
             btCancelarEditPets.TextAlign = ContentAlignment.MiddleRight;
             btCancelarEditPets.UseVisualStyleBackColor = false;
@@ -268,7 +268,7 @@
             btAlterarPet.Location = new Point(582, 373);
             btAlterarPet.Name = "btAlterarPet";
             btAlterarPet.Size = new Size(182, 65);
-            btAlterarPet.TabIndex = 79;
+            btAlterarPet.TabIndex = 31;
             btAlterarPet.Text = "ALTERAR";
             btAlterarPet.TextAlign = ContentAlignment.MiddleRight;
             btAlterarPet.UseVisualStyleBackColor = false;
@@ -282,7 +282,7 @@
             cbDonoEditarPet.Location = new Point(458, 236);
             cbDonoEditarPet.Name = "cbDonoEditarPet";
             cbDonoEditarPet.Size = new Size(242, 28);
-            cbDonoEditarPet.TabIndex = 83;
+            cbDonoEditarPet.TabIndex = 29;
             // 
             // pictureBox2
             // 
@@ -300,7 +300,7 @@
             txtIdPet.Location = new Point(460, 330);
             txtIdPet.Name = "txtIdPet";
             txtIdPet.Size = new Size(237, 27);
-            txtIdPet.TabIndex = 84;
+            txtIdPet.TabIndex = 30;
             // 
             // lbIdPet
             // 
